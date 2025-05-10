@@ -1,0 +1,136 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:PersonalBudgeting"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
+             xmlns:sty="using:FluentAvalonia.Styling"
+             x:Class="PersonalBudgeting.App"
+             RequestedThemeVariant="Dark">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="avares://PersonalBudgeting/Styles/Colors.axaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.Styles>
+        <sty:FluentAvaloniaTheme PreferSystemTheme="False" />
+        <StyleInclude Source="avares://PersonalBudgeting/Styles/GlobalStyles.axaml"/>
+        <FluentTheme />
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+        
+        <!-- Common Button Styles -->
+        <Style Selector="Button.accent">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="16,8"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style Selector="Button.accent:pointerover">
+            <Setter Property="Background" Value="#1976D2"/>
+        </Style>
+
+        <Style Selector="Button.accent:pressed">
+            <Setter Property="Background" Value="#0D47A1"/>
+        </Style>
+
+        <Style Selector="Button.success">
+            <Setter Property="Background" Value="#43A047"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style Selector="Button.success:pointerover">
+            <Setter Property="Background" Value="#388E3C"/>
+        </Style>
+
+        <Style Selector="Button.icon">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+
+        <Style Selector="Button.icon:pointerover">
+            <Setter Property="Background" Value="#20000000"/>
+        </Style>
+
+        <Style Selector="TextBox.clearButton">
+            <Setter Property="UseFloatingWatermark" Value="False"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="CornerRadius" Value="4"/>
+        </Style>
+
+        <Style Selector="TextBox.clearButton:focus /template/ TextBlock#PART_Watermark">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+
+        <Style Selector="TextBox.clearButton:focus">
+            <Setter Property="Watermark" Value=""/>
+        </Style>
+
+        <Style Selector="TextBox.clearButton:not(:empty)">
+            <Setter Property="Watermark" Value=""/>
+        </Style>
+
+        <Style Selector="TextBox.clearButton:pointerover /template/ TextBlock#PART_Watermark">
+            <Setter Property="Opacity" Value="0.7"/>
+        </Style>
+
+        <!-- Global Styles -->
+        <Style Selector="Border.card">
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BoxShadow" Value="0 2 4 0 #40000000"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+        </Style>
+        
+        <Style Selector="Button.actionButton">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style Selector="Button.deleteButton">
+            <Setter Property="Background" Value="#F44336"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="#007BFF"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style Selector="Border.popup > StackPanel">
+            <Setter Property="Background" Value="#282828"/>
+            <Setter Property="Width" Value="350"/>
+        </Style>
+        
+        <Style Selector="Border.popup">
+            <Setter Property="IsVisible" Value="False"/>
+            <Setter Property="ZIndex" Value="1000"/>
+            <Setter Property="Background" Value="#33333399"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BoxShadow" Value="0 4 12 0 #80000000"/>
+        </Style>
+        
+        <Style Selector="Border.popup > Panel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Application.Styles>
+
+</Application>
